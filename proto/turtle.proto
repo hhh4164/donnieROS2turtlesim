@@ -1,4 +1,5 @@
-edition = "proto3"
+syntax = "proto3"
+package turtleproto;
 
 message TurtleCommand {
     enum Direction{
@@ -8,4 +9,5 @@ message TurtleCommand {
         FORWARD = 3;
         BACKWARD = 4;
     }
+    Direction direction = 1;
 }
