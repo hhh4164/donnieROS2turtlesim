@@ -10,7 +10,7 @@ int main(int argc, char** argv){
     //node becomes ublisher to turtle1/cmd_vel, message is in format of Twist
     //node is also subscribed to topic1
     auto sub = node->create_subscription<std_msgs::msg::UInt8MultiArray>("topic1", 10, 
-    [pub](auto msg){ 
+    [pub](std_msgs::msg::UInt8MultiArray::SharedPtr msg){ 
         turtleproto::TurtleCommand cmd;
         std::string bytes(msg->data.begin(), msg->data.end());
         cmd.ParseFromString(bytes); //deserializes the bytes and reconstructs cmd
