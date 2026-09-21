@@ -1,4 +1,4 @@
-syntax = "proto3"
+syntax = "proto3";
 package turtleproto;
 
 message TurtleCommand {
@@ -8,6 +8,6 @@ message TurtleCommand {
         RIGHT = 2;
         FORWARD = 3;
         BACKWARD = 4;
-    }
+    };
     Direction direction = 1;
 }

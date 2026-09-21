@@ -17,7 +17,6 @@ Input ->Teleop node-> protobuf message -> control_node -> Twist -> cmd_vel -> tu
 
 # Structure:
 ```
-donnieROS2turtlesim
 ├── CMakeLists.txt
 ├── DOC.md
 ├── LICENSE
@@ -27,4 +26,6 @@ donnieROS2turtlesim
 ├── proto
 │   └── turtle.proto
 └── src
+    ├── control.cpp
+    └── teleop.cpp
 ```

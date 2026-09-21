@@ -7,7 +7,7 @@
 int main(int argc, char** argv) {
     rclcpp::init(argc, argv);
     auto node = std::make_shared<rclcpp::Node>("teleop"); //create node
-    auto pub = node->create_publisher<std_msgs::UInt8MultiArray>("topic1", 10);
+    auto pub = node->create_publisher<std_msgs::msg::UInt8MultiArray>("topic1", 10);
     /*node becomes a publisher to topic1, message is in format of unsigned ints
     to send serialized protobuf message (stream of bytes) */
 
